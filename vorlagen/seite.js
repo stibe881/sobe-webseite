@@ -31,35 +31,140 @@
     });
   }
 
-  // -------------------------------------------- 2. Kacheln und Stellenfilter
+  // ------------------------------------- 2. Kacheln und die offenen Stellen
   document.addEventListener('click', function (e) {
     var kachel = e.target.closest('.kachel.klickbar');
     if (!kachel || e.target.closest('a, button, input')) return;
     location.href = kachel.dataset.ziel;
   });
 
+  // Die offenen Stellen kommen von der Stellenbörse publicjobs.ch. Dort
+  // werden sie ohnehin ausgeschrieben; eine zweite, von Hand gepflegte
+  // Liste im Repository lief immer hinterher. Geholt wird die rohe Antwort
+  // des Dienstes, gezeichnet wird in unseren eigenen Zeilen – das Widget
+  // von publicjobs setzt jQuery voraus und bringt ein fremdes Aussehen mit.
   (function () {
-    var filter = Array.prototype.slice.call(document.querySelectorAll('.filter'));
-    var stellen = Array.prototype.slice.call(document.querySelectorAll('.stelle'));
+    var liste = document.getElementById('stellenliste');
+    if (!liste) return;
     var anzahl = document.getElementById('anzahl');
     var leer = document.getElementById('leer');
-    if (!filter.length) return;
+    var fehler = document.getElementById('stellenfehler');
+    var filterzeile = document.getElementById('stellenfilter');
+    var quelle = liste.dataset.quelle;
+    if (!quelle) { if (fehler) fehler.hidden = false; return; }
 
-    function filtern(bereich) {
+    // Der Dienst liefert Titel mit HTML-Entitäten («Heilp&auml;dagog*in»).
+    // Ein losgelöstes <textarea> entschlüsselt sie, ohne dass daraus je
+    // Markup werden könnte: Sein Inhalt wird als reiner Text gelesen.
+    var entschluessler = document.createElement('textarea');
+    function klartext(s) {
+      entschluessler.innerHTML = String(s == null ? '' : s);
+      return entschluessler.value;
+    }
+
+    // Eine Adresse aus fremder Hand wird nie ungeprüft zu einem Verweis:
+    // «javascript:» in einem href wäre sonst ein offenes Tor.
+    function sichereAdresse(s) {
+      try {
+        var u = new URL(String(s), location.href);
+        return (u.protocol === 'https:' || u.protocol === 'http:') ? u.href : '';
+      } catch (e) { return ''; }
+    }
+
+    var stellen = [];
+
+    function zeichnen(ort) {
+      liste.textContent = '';
       var sichtbar = 0;
       stellen.forEach(function (s) {
-        var passt = bereich === 'alle' || s.dataset.bereich === bereich;
-        s.hidden = !passt;
-        if (passt) sichtbar++;
-      });
-      filter.forEach(function (f) {
-        f.setAttribute('aria-pressed', f.dataset.bereich === bereich ? 'true' : 'false');
+        if (ort !== 'alle' && s.ort !== ort) return;
+        sichtbar++;
+        var zeile = document.createElement('div');
+        zeile.className = 'reihe stelle';
+        var inhalt = document.createElement('div');
+        inhalt.className = 'inhalt';
+        var titel = document.createElement('span');
+        titel.style.fontSize = '18px';
+        titel.style.fontWeight = '700';
+        if (s.adresse) {
+          var a = document.createElement('a');
+          a.href = s.adresse;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = s.titel;
+          titel.appendChild(a);
+        } else {
+          titel.textContent = s.titel;
+        }
+        inhalt.appendChild(titel);
+        zeile.appendChild(inhalt);
+        var rechts = document.createElement('div');
+        rechts.className = 'datum';
+        rechts.style.width = 'auto';
+        rechts.style.textAlign = 'right';
+        rechts.style.minWidth = '140px';
+        rechts.textContent = [s.ort, s.eintritt && T('Eintritt ab') + ' ' + s.eintritt]
+          .filter(Boolean).join(' · ');
+        zeile.appendChild(rechts);
+        liste.appendChild(zeile);
       });
       if (anzahl) anzahl.textContent = sichtbar + ' ' + (sichtbar === 1 ? T('Stelle') : T('Stellen'));
       if (leer) leer.hidden = sichtbar > 0;
     }
-    filter.forEach(function (f) { f.addEventListener('click', function () { filtern(f.dataset.bereich); }); });
-    filtern('alle');
+
+    function filterBauen() {
+      if (!filterzeile) return;
+      var orte = [];
+      stellen.forEach(function (s) { if (s.ort && orte.indexOf(s.ort) < 0) orte.push(s.ort); });
+      // Ein Filter mit einem einzigen Knopf hilft niemandem.
+      if (orte.length < 2) return;
+      filterzeile.hidden = false;
+      [T('Alle')].concat(orte).forEach(function (name, i) {
+        var wert = i === 0 ? 'alle' : name;
+        var knopf = document.createElement('button');
+        knopf.type = 'button';
+        knopf.className = 'filter';
+        knopf.textContent = name;
+        knopf.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+        knopf.addEventListener('click', function () {
+          Array.prototype.forEach.call(filterzeile.children, function (k) {
+            k.setAttribute('aria-pressed', k === knopf ? 'true' : 'false');
+          });
+          zeichnen(wert);
+        });
+        filterzeile.appendChild(knopf);
+      });
+    }
+
+    var daten = new URLSearchParams();
+    daten.set('kdNr', liste.dataset.kdnr || '');
+    daten.set('page', '1');
+    daten.set('limit', liste.dataset.limit || '25');
+    daten.set('language', liste.dataset.sprache || 'de');
+
+    fetch(quelle, { method: 'POST', body: daten })
+      .then(function (a) { if (!a.ok) throw new Error(a.status); return a.json(); })
+      .then(function (d) {
+        if (!d || d.success !== true || !Array.isArray(d.data)) throw new Error('unbrauchbar');
+        stellen = d.data.map(function (j) {
+          return {
+            titel: klartext(j.job_title),
+            adresse: sichereAdresse(j.job_detail_url),
+            ort: klartext(j.org_city),
+            // Ohne Datum steht auf der Börse «nach Vereinbarung». Das
+            // schreiben wir nicht selbst hin – dann bleibt die Stelle leer.
+            eintritt: klartext(j.job_start_date),
+          };
+        }).filter(function (s) { return s.titel; });
+        filterBauen();
+        zeichnen('alle');
+      })
+      .catch(function () {
+        liste.textContent = '';
+        if (anzahl) anzahl.textContent = '';
+        if (leer) leer.hidden = true;
+        if (fehler) fehler.hidden = false;
+      });
   })();
 
   // ------------------------------------------- 3. Barrierefreiheits-Werkzeuge

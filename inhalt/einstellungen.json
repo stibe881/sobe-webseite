@@ -6,6 +6,11 @@
   "telefonWahl": "+41417677833",
   "mail": "info@sonnenberg-baar.ch",
   "mailIntake": "anfrage@sonnenberg-baar.ch",
+  "stellenboerse": {
+    "kdNr": "108447",
+    "quelle": "https://www.publicjobs.ch/widget",
+    "limit": 25
+  },
   "menue": [
     {
       "titel": "Start",

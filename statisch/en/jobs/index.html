@@ -135,70 +135,15 @@ try {
           <h2>Vacancies</h2>
           <p class="marke" id="anzahl" aria-live="polite"></p>
         </div>
-        <div class="filterzeile">
-          <button type="button" class="filter" data-bereich="alle" aria-pressed="false">All</button>
-          
-        </div>
-        <div style="margin-top: 6px;">
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/lehrperson-wah-und-textiles-gestalten-txg-als-stellvertretung/">Lehrperson WAH und Textiles Gestalten (TxG) als Stellvertretung</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/dipl-sozialpaedagogein-fabe-hf-fh-internat-80/">Dipl. Sozialpädagoge*in / FaBe HF/FH Internat (80%)</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/logopaedin-logopaeden-40-100/">Logopädin/Logopäden 40 - 100 %</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/stellvertretung-logopaedie/">Stellvertretung Logopädie</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/fachfrau-mann-betreuung-im-bereich-begleitetes-wohnen/">Fachfrau-/mann Betreuung im Bereich begleitetes Wohnen</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/schulische-heilpaedagogin-oder-lehrperson-in-einem-pensum-von-43/">Schulische Heilpädagog*in oder Lehrperson in einem Pensum von 43%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/angebotsleitung-schulleitung-verhalten-plus-55-65/">Angebotsleitung (Schulleitung) Verhalten Plus 55 - 65%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/en/jobs/dipl-sozialpaedagogein-40-bis-60/">Dipl. Sozialpädagoge*in, FaGe, FaBe oder Pflegefachperson 40 - 60%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-        </div>
-        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>There is currently no vacancy in this area.</p>
-        
+        <div class="filterzeile" id="stellenfilter" hidden></div>
+        <div id="stellenliste" style="margin-top: 6px;"
+          data-quelle="https://www.publicjobs.ch/widget"
+          data-kdnr="108447"
+          data-limit="25"
+          data-sprache="en"></div>
+        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>Zurzeit keine offenen Stellen.</p>
+        <p id="stellenfehler" class="fliess" style="margin-top: 14px;" hidden>Die offenen Stellen lassen sich gerade nicht laden. <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p>
+        <noscript><p class="fliess" style="margin-top: 14px;">Die offenen Stellen werden erst im Browser geladen. <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p></noscript>
       </div>
     <div class="kachel s2">
         <h2>What we offer</h2>
@@ -225,7 +170,7 @@ try {
   </div>
 </main>
 
-<script>window.SOBE = {"wurzel":"/en/","sprache":"en","gebietsschema":"en-GB","texte":{"Vorlese-Modus":"Read aloud","Vorlesen":"Read aloud","Pause":"Pause","Beenden":"Stop","Bereit. Auf «Vorlesen» drücken.":"Ready. Press “Read aloud”.","Liest vor …":"Reading …","Fertig gelesen.":"Finished reading.","Auf dieser Seite ist nichts zu lesen.":"There is nothing to read on this page.","Dieser Browser kann nicht vorlesen.":"This browser cannot read aloud.","Bitte geben Sie einen Suchbegriff ein.":"Please enter a search term.","Wird gesucht …":"Searching …","Keine Treffer für":"No results for","Treffer":"results","Stelle":"vacancy","Stellen":"vacancies","Zwischensumme":"Subtotal","Versand":"Postage","Gesamt":"Total","Abholung":"Collection","Entfernen":"Remove","Anzahl":"Quantity","Ihr Warenkorb ist leer.":"Your basket is empty.","Ist im Warenkorb.":"Added to your basket.","Wird abgeschickt …":"Sending …","Vielen Dank für Ihre Bestellung.":"Thank you for your order.","Ihre Bestellnummer":"Your order number","Stück":"item","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Nothing is paid online. We confirm your order by e-mail, by hand.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"The order could not be sent. Please try again later.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Please fill in the fields marked with *.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Try a shorter term, or look in the menu.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"The index could not be loaded. Please reload the page."}};</script>
+<script>window.SOBE = {"wurzel":"/en/","sprache":"en","gebietsschema":"en-GB","texte":{"Vorlese-Modus":"Read aloud","Vorlesen":"Read aloud","Pause":"Pause","Beenden":"Stop","Bereit. Auf «Vorlesen» drücken.":"Ready. Press “Read aloud”.","Liest vor …":"Reading …","Fertig gelesen.":"Finished reading.","Auf dieser Seite ist nichts zu lesen.":"There is nothing to read on this page.","Dieser Browser kann nicht vorlesen.":"This browser cannot read aloud.","Bitte geben Sie einen Suchbegriff ein.":"Please enter a search term.","Wird gesucht …":"Searching …","Keine Treffer für":"No results for","Treffer":"results","Stelle":"vacancy","Stellen":"vacancies","Alle":"All","Eintritt ab":"Start date","Zwischensumme":"Subtotal","Versand":"Postage","Gesamt":"Total","Abholung":"Collection","Entfernen":"Remove","Anzahl":"Quantity","Ihr Warenkorb ist leer.":"Your basket is empty.","Ist im Warenkorb.":"Added to your basket.","Wird abgeschickt …":"Sending …","Vielen Dank für Ihre Bestellung.":"Thank you for your order.","Ihre Bestellnummer":"Your order number","Stück":"item","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Nothing is paid online. We confirm your order by e-mail, by hand.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"The order could not be sent. Please try again later.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Please fill in the fields marked with *.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Try a shorter term, or look in the menu.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"The index could not be loaded. Please reload the page."}};</script>
 <script src="/seite.js" defer></script>
 </body>
 </html>

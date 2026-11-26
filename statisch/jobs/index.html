@@ -135,70 +135,15 @@ try {
           <h2>Offene Stellen</h2>
           <p class="marke" id="anzahl" aria-live="polite"></p>
         </div>
-        <div class="filterzeile">
-          <button type="button" class="filter" data-bereich="alle" aria-pressed="false">Alle</button>
-          
-        </div>
-        <div style="margin-top: 6px;">
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/lehrperson-wah-und-textiles-gestalten-txg-als-stellvertretung/">Lehrperson WAH und Textiles Gestalten (TxG) als Stellvertretung</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/dipl-sozialpaedagogein-fabe-hf-fh-internat-80/">Dipl. Sozialpädagoge*in / FaBe HF/FH Internat (80%)</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/logopaedin-logopaeden-40-100/">Logopädin/Logopäden 40 - 100 %</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/stellvertretung-logopaedie/">Stellvertretung Logopädie</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/fachfrau-mann-betreuung-im-bereich-begleitetes-wohnen/">Fachfrau-/mann Betreuung im Bereich begleitetes Wohnen</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/schulische-heilpaedagogin-oder-lehrperson-in-einem-pensum-von-43/">Schulische Heilpädagog*in oder Lehrperson in einem Pensum von 43%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/angebotsleitung-schulleitung-verhalten-plus-55-65/">Angebotsleitung (Schulleitung) Verhalten Plus 55 - 65%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/jobs/dipl-sozialpaedagogein-40-bis-60/">Dipl. Sozialpädagoge*in, FaGe, FaBe oder Pflegefachperson 40 - 60%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-        </div>
-        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>In diesem Bereich ist zurzeit keine Stelle ausgeschrieben.</p>
-        
+        <div class="filterzeile" id="stellenfilter" hidden></div>
+        <div id="stellenliste" style="margin-top: 6px;"
+          data-quelle="https://www.publicjobs.ch/widget"
+          data-kdnr="108447"
+          data-limit="25"
+          data-sprache="de"></div>
+        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>Zurzeit keine offenen Stellen.</p>
+        <p id="stellenfehler" class="fliess" style="margin-top: 14px;" hidden>Die offenen Stellen lassen sich gerade nicht laden. <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p>
+        <noscript><p class="fliess" style="margin-top: 14px;">Die offenen Stellen werden erst im Browser geladen. <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p></noscript>
       </div>
     <div class="kachel s2">
         <h2>Was wir bieten</h2>
@@ -225,7 +170,7 @@ try {
   </div>
 </main>
 
-<script>window.SOBE = {"wurzel":"/","sprache":"de","gebietsschema":"de-CH","texte":{"Vorlese-Modus":"Vorlese-Modus","Vorlesen":"Vorlesen","Pause":"Pause","Beenden":"Beenden","Bereit. Auf «Vorlesen» drücken.":"Bereit. Auf «Vorlesen» drücken.","Liest vor …":"Liest vor …","Fertig gelesen.":"Fertig gelesen.","Auf dieser Seite ist nichts zu lesen.":"Auf dieser Seite ist nichts zu lesen.","Dieser Browser kann nicht vorlesen.":"Dieser Browser kann nicht vorlesen.","Bitte geben Sie einen Suchbegriff ein.":"Bitte geben Sie einen Suchbegriff ein.","Wird gesucht …":"Wird gesucht …","Keine Treffer für":"Keine Treffer für","Treffer":"Treffer","Stelle":"Stelle","Stellen":"Stellen","Zwischensumme":"Zwischensumme","Versand":"Versand","Gesamt":"Gesamt","Abholung":"Abholung","Entfernen":"Entfernen","Anzahl":"Anzahl","Ihr Warenkorb ist leer.":"Ihr Warenkorb ist leer.","Ist im Warenkorb.":"Ist im Warenkorb.","Wird abgeschickt …":"Wird abgeschickt …","Vielen Dank für Ihre Bestellung.":"Vielen Dank für Ihre Bestellung.","Ihre Bestellnummer":"Ihre Bestellnummer","Stück":"Stück","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Bitte füllen Sie die mit * bezeichneten Felder aus.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden."}};</script>
+<script>window.SOBE = {"wurzel":"/","sprache":"de","gebietsschema":"de-CH","texte":{"Vorlese-Modus":"Vorlese-Modus","Vorlesen":"Vorlesen","Pause":"Pause","Beenden":"Beenden","Bereit. Auf «Vorlesen» drücken.":"Bereit. Auf «Vorlesen» drücken.","Liest vor …":"Liest vor …","Fertig gelesen.":"Fertig gelesen.","Auf dieser Seite ist nichts zu lesen.":"Auf dieser Seite ist nichts zu lesen.","Dieser Browser kann nicht vorlesen.":"Dieser Browser kann nicht vorlesen.","Bitte geben Sie einen Suchbegriff ein.":"Bitte geben Sie einen Suchbegriff ein.","Wird gesucht …":"Wird gesucht …","Keine Treffer für":"Keine Treffer für","Treffer":"Treffer","Stelle":"Stelle","Stellen":"Stellen","Alle":"Alle","Eintritt ab":"Eintritt ab","Zwischensumme":"Zwischensumme","Versand":"Versand","Gesamt":"Gesamt","Abholung":"Abholung","Entfernen":"Entfernen","Anzahl":"Anzahl","Ihr Warenkorb ist leer.":"Ihr Warenkorb ist leer.","Ist im Warenkorb.":"Ist im Warenkorb.","Wird abgeschickt …":"Wird abgeschickt …","Vielen Dank für Ihre Bestellung.":"Vielen Dank für Ihre Bestellung.","Ihre Bestellnummer":"Ihre Bestellnummer","Stück":"Stück","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Bitte füllen Sie die mit * bezeichneten Felder aus.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden."}};</script>
 <script src="/seite.js" defer></script>
 </body>
 </html>

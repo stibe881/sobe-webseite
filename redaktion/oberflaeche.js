@@ -1104,6 +1104,13 @@ function einstellungenZeigen() {
     { id: 'telefonWahl', art: 'text', name: 'Telefon zum Wählen', hinweis: 'z. B. +41417677833' },
     { id: 'mail', art: 'text', name: 'E-Mail' },
     { id: 'mailIntake', art: 'text', name: 'E-Mail für Anfragen' },
+    { id: 'stellenboerse', art: 'objekt', name: 'Offene Stellen (publicjobs.ch)', unter: [
+      { id: 'kdNr', art: 'text', name: 'Kundennummer',
+        hinweis: 'Die Nummer bei publicjobs.ch. Daran hängt, wessen Stellen erscheinen.' },
+      { id: 'quelle', art: 'text', name: 'Adresse der Schnittstelle',
+        hinweis: 'Nur ändern, wenn publicjobs eine neue nennt.' },
+      { id: 'limit', art: 'zahl', name: 'Höchstens so viele Stellen' },
+    ] },
   ]);
 }
 

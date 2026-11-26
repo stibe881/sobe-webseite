@@ -118,30 +118,34 @@ const arten = {
       </div>`;
   },
 
+  // Die offenen Stellen stehen nicht mehr im Repository, sondern kommen von
+  // der Stellenbörse publicjobs.ch – dort werden sie ohnehin ausgeschrieben,
+  // und eine zweite, von Hand gepflegte Liste läuft immer hinterher.
+  //
+  // Eingebunden wird nicht das Widget von publicjobs: Dessen Skript setzt
+  // jQuery voraus (es ruft «jQuery.each»), bringt es aber nicht mit, und es
+  // legt eine eigene Schriftart und ein eigenes Raster über die Kachel.
+  // Zwei Nachladungen und ein fremdes Aussehen für eine Liste, die der
+  // Dienst auch als JSON herausgibt – mit «Access-Control-Allow-Origin: *»,
+  // also direkt aus dem Browser lesbar. Der Rumpf steht hier, gefüllt wird
+  // er in seite.js.
   stellen: (b, hilfe) => {
-    const { stellen, t, sprache } = hilfe;
-    const bereiche = [...new Set(stellen.map((s) => s.bereich).filter(Boolean))];
-    const entwurf = stellen.some((s) => s.entwurf === true || s.entwurf === 'true');
+    const { einstellungen, t, sprache } = hilfe;
+    const boerse = einstellungen.stellenboerse || {};
     return `<div class="kachel ${spalte(b)}">
         <div class="paar" style="justify-content: space-between; align-items: baseline;">
           <h2>${schuetzen(b.titel)}</h2>
           <p class="marke" id="anzahl" aria-live="polite"></p>
         </div>
-        <div class="filterzeile">
-          <button type="button" class="filter" data-bereich="alle" aria-pressed="false">${schuetzen(t('Alle'))}</button>
-          ${bereiche.map((x) => `<button type="button" class="filter" data-bereich="${schuetzen(x)}" aria-pressed="false">${schuetzen(x)}</button>`).join('')}
-        </div>
-        <div style="margin-top: 6px;">${stellen.map((s) => `
-          <div class="reihe stelle" data-bereich="${schuetzen(s.bereich || 'alle')}">
-            <div class="inhalt">
-              ${s.bereich ? `<p class="marke" style="font-size: 12px;">${schuetzen(s.bereich)}</p>` : ''}
-              <span style="font-size: 18px; font-weight: 700;"><a href="${schuetzen(pfadFuer(`/jobs/${s.kennung}/`, sprache))}">${schuetzen(s.titel)}</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;">${schuetzen([s.pensum, s.eintritt && t('Eintritt ab') + ' ' + s.eintritt].filter(Boolean).join(' · '))}</div>
-          </div>`).join('')}
-        </div>
-        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>${schuetzen(t('In diesem Bereich ist zurzeit keine Stelle ausgeschrieben.'))}</p>
-        ${entwurf ? `<p class="hinweis">${schuetzen(t('Einzelne Ausschreibungen sind noch als Entwurf hinterlegt.'))}</p>` : ''}
+        <div class="filterzeile" id="stellenfilter" hidden></div>
+        <div id="stellenliste" style="margin-top: 6px;"
+          data-quelle="${schuetzen(boerse.quelle || '')}"
+          data-kdnr="${schuetzen(boerse.kdNr || '')}"
+          data-limit="${schuetzen(String(boerse.limit || 25))}"
+          data-sprache="${schuetzen(sprache.kennung)}"></div>
+        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>${schuetzen(t('Zurzeit keine offenen Stellen.'))}</p>
+        <p id="stellenfehler" class="fliess" style="margin-top: 14px;" hidden>${schuetzen(t('Die offenen Stellen lassen sich gerade nicht laden.'))} <a href="mailto:${schuetzen(einstellungen.mail)}">${schuetzen(einstellungen.mail)}</a></p>
+        <noscript><p class="fliess" style="margin-top: 14px;">${schuetzen(t('Die offenen Stellen werden erst im Browser geladen.'))} <a href="mailto:${schuetzen(einstellungen.mail)}">${schuetzen(einstellungen.mail)}</a></p></noscript>
       </div>`;
   },
 

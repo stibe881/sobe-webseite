@@ -271,12 +271,20 @@ const server = createServer(async (req, res) => {
     const pfad = decodeURIComponent(url.pathname);
     const zugang = await zugangLesen(WURZEL);
 
-    if (!zugang) {
+    // Ohne Passwortdatei war früher die ganze Webseite aus: Jede Anfrage
+    // bekam 500, auch die Startseite. Auf einem frischen Klon – und
+    // «zugang.json» gehört nicht ins Repository – stand damit das Haus
+    // still, bis jemand ein Passwort setzte. Gesperrt gehört aber nur die
+    // Redaktion; die Webseite kennt kein Passwort und braucht keines.
+    const zurRedaktion = pfad === '/redaktion' || pfad.startsWith('/redaktion/')
+      || pfad.startsWith('/api/');
+    if (!zugang && zurRedaktion) {
       res.writeHead(500, { 'content-type': 'text/plain; charset=utf-8' });
       return res.end('Kein Zugang eingerichtet. Zuerst auf dem Server: node redaktion/passwort.mjs');
     }
 
-    const angemeldet = sitzungGueltig(plaetzchen(req, 'redaktion'), zugang.geheimnis);
+    const angemeldet = Boolean(zugang)
+      && sitzungGueltig(plaetzchen(req, 'redaktion'), zugang.geheimnis);
     const eigeneAnfrage = req.headers['x-redaktion'] === 'ja';
 
     // ------------------------------------------------------------- Anmeldung

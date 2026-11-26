@@ -172,7 +172,7 @@ ${inhalt}
     'Bereit. Auf «Vorlesen» drücken.', 'Liest vor …', 'Fertig gelesen.',
     'Auf dieser Seite ist nichts zu lesen.', 'Dieser Browser kann nicht vorlesen.',
     'Bitte geben Sie einen Suchbegriff ein.', 'Wird gesucht …',
-    'Keine Treffer für', 'Treffer', 'Stelle', 'Stellen',
+    'Keine Treffer für', 'Treffer', 'Stelle', 'Stellen', 'Alle', 'Eintritt ab',
     'Zwischensumme', 'Versand', 'Gesamt', 'Abholung', 'Entfernen', 'Anzahl',
     'Ihr Warenkorb ist leer.', 'Ist im Warenkorb.', 'Wird abgeschickt …',
     'Vielen Dank für Ihre Bestellung.', 'Ihre Bestellnummer', 'Stück',

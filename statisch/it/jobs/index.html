@@ -135,70 +135,15 @@ try {
           <h2>Posti vacanti</h2>
           <p class="marke" id="anzahl" aria-live="polite"></p>
         </div>
-        <div class="filterzeile">
-          <button type="button" class="filter" data-bereich="alle" aria-pressed="false">Tutti</button>
-          
-        </div>
-        <div style="margin-top: 6px;">
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/lehrperson-wah-und-textiles-gestalten-txg-als-stellvertretung/">Lehrperson WAH und Textiles Gestalten (TxG) als Stellvertretung</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/dipl-sozialpaedagogein-fabe-hf-fh-internat-80/">Dipl. Sozialpädagoge*in / FaBe HF/FH Internat (80%)</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/logopaedin-logopaeden-40-100/">Logopädin/Logopäden 40 - 100 %</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/stellvertretung-logopaedie/">Stellvertretung Logopädie</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/fachfrau-mann-betreuung-im-bereich-begleitetes-wohnen/">Fachfrau-/mann Betreuung im Bereich begleitetes Wohnen</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/schulische-heilpaedagogin-oder-lehrperson-in-einem-pensum-von-43/">Schulische Heilpädagog*in oder Lehrperson in einem Pensum von 43%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/angebotsleitung-schulleitung-verhalten-plus-55-65/">Angebotsleitung (Schulleitung) Verhalten Plus 55 - 65%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-          <div class="reihe stelle" data-bereich="alle">
-            <div class="inhalt">
-              
-              <span style="font-size: 18px; font-weight: 700;"><a href="/it/jobs/dipl-sozialpaedagogein-40-bis-60/">Dipl. Sozialpädagoge*in, FaGe, FaBe oder Pflegefachperson 40 - 60%</a></span>
-            </div>
-            <div class="datum" style="width: auto; text-align: right; min-width: 140px;"></div>
-          </div>
-        </div>
-        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>In questo settore al momento non è aperta nessuna posizione.</p>
-        
+        <div class="filterzeile" id="stellenfilter" hidden></div>
+        <div id="stellenliste" style="margin-top: 6px;"
+          data-quelle="https://www.publicjobs.ch/widget"
+          data-kdnr="108447"
+          data-limit="25"
+          data-sprache="it"></div>
+        <p id="leer" class="fliess" style="margin-top: 14px;" hidden>Zurzeit keine offenen Stellen.</p>
+        <p id="stellenfehler" class="fliess" style="margin-top: 14px;" hidden>Die offenen Stellen lassen sich gerade nicht laden. <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p>
+        <noscript><p class="fliess" style="margin-top: 14px;">Die offenen Stellen werden erst im Browser geladen. <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p></noscript>
       </div>
     <div class="kachel s2">
         <h2>Che cosa offriamo</h2>
@@ -225,7 +170,7 @@ try {
   </div>
 </main>
 
-<script>window.SOBE = {"wurzel":"/it/","sprache":"it","gebietsschema":"it-CH","texte":{"Vorlese-Modus":"Lettura ad alta voce","Vorlesen":"Leggi ad alta voce","Pause":"Pausa","Beenden":"Termina","Bereit. Auf «Vorlesen» drücken.":"Pronto. Prema «Leggi ad alta voce».","Liest vor …":"Lettura in corso …","Fertig gelesen.":"Lettura terminata.","Auf dieser Seite ist nichts zu lesen.":"In questa pagina non c'è nulla da leggere.","Dieser Browser kann nicht vorlesen.":"Questo browser non può leggere ad alta voce.","Bitte geben Sie einen Suchbegriff ein.":"Inserisca un termine di ricerca.","Wird gesucht …":"Ricerca in corso …","Keine Treffer für":"Nessun risultato per","Treffer":"risultati","Stelle":"posto","Stellen":"posti","Zwischensumme":"Subtotale","Versand":"Spese di spedizione","Gesamt":"Totale","Abholung":"Ritiro sul posto","Entfernen":"Rimuovere","Anzahl":"Quantità","Ihr Warenkorb ist leer.":"Il suo carrello è vuoto.","Ist im Warenkorb.":"Aggiunto al carrello.","Wird abgeschickt …":"Invio in corso …","Vielen Dank für Ihre Bestellung.":"Grazie per il suo ordine.","Ihre Bestellnummer":"Il suo numero d'ordine","Stück":"pezzo","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Non si paga nulla online. Confermiamo il suo ordine a mano per e-mail.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"Non è stato possibile inviare l'ordine. Riprovi più tardi.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Compili i campi contrassegnati con *.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Provi un termine più breve oppure consulti il menu.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"Non è stato possibile caricare l'indice. Ricarichi la pagina."}};</script>
+<script>window.SOBE = {"wurzel":"/it/","sprache":"it","gebietsschema":"it-CH","texte":{"Vorlese-Modus":"Lettura ad alta voce","Vorlesen":"Leggi ad alta voce","Pause":"Pausa","Beenden":"Termina","Bereit. Auf «Vorlesen» drücken.":"Pronto. Prema «Leggi ad alta voce».","Liest vor …":"Lettura in corso …","Fertig gelesen.":"Lettura terminata.","Auf dieser Seite ist nichts zu lesen.":"In questa pagina non c'è nulla da leggere.","Dieser Browser kann nicht vorlesen.":"Questo browser non può leggere ad alta voce.","Bitte geben Sie einen Suchbegriff ein.":"Inserisca un termine di ricerca.","Wird gesucht …":"Ricerca in corso …","Keine Treffer für":"Nessun risultato per","Treffer":"risultati","Stelle":"posto","Stellen":"posti","Alle":"Tutti","Eintritt ab":"Entrata in servizio","Zwischensumme":"Subtotale","Versand":"Spese di spedizione","Gesamt":"Totale","Abholung":"Ritiro sul posto","Entfernen":"Rimuovere","Anzahl":"Quantità","Ihr Warenkorb ist leer.":"Il suo carrello è vuoto.","Ist im Warenkorb.":"Aggiunto al carrello.","Wird abgeschickt …":"Invio in corso …","Vielen Dank für Ihre Bestellung.":"Grazie per il suo ordine.","Ihre Bestellnummer":"Il suo numero d'ordine","Stück":"pezzo","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Non si paga nulla online. Confermiamo il suo ordine a mano per e-mail.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"Non è stato possibile inviare l'ordine. Riprovi più tardi.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Compili i campi contrassegnati con *.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Provi un termine più breve oppure consulti il menu.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"Non è stato possibile caricare l'indice. Ricarichi la pagina."}};</script>
 <script src="/seite.js" defer></script>
 </body>
 </html>

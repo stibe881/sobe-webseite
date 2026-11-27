@@ -137,6 +137,27 @@ main { max-width: 1240px; margin: 0 auto; padding: 18px 20px 40px; }
 .reihe .datum { flex: none; width: 130px; color: var(--grau); font-size: 0.9062rem; }
 .reihe .inhalt { flex: 1; min-width: 200px; }
 .held { font-size: clamp(1.875rem, 5vw, 2.875rem); font-weight: 800; line-height: 1.08; }
+
+/* Das grosse Foto auf der Startseite. Schrift auf einem Foto ist nur
+   lesbar, wenn ein Verlauf darunterliegt – ohne ihn hängt sie je nach
+   Bildstelle in der Luft, und zwar unvorhersehbar: Das Bild kann morgen
+   ein anderes sein. */
+/* «.kachel.heldbild» und nicht «.heldbild»: Auf schmalen Geräten setzt
+   «.kachel { padding: 22px }» das Polster wieder – gleich spezifisch, aber
+   weiter unten im Blatt. Das Foto bekam dadurch einen dunklen Rahmen. */
+.kachel.heldbild { position: relative; padding: 0; overflow: hidden; background: var(--nacht); }
+.heldbild img { width: 100%; height: clamp(260px, 40vw, 440px); object-fit: cover; display: block; }
+.heldbildtext { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 30px 30px;
+  background: linear-gradient(to top, rgba(8, 18, 16, 0.86), rgba(8, 18, 16, 0.58) 58%, rgba(8, 18, 16, 0)); }
+.heldbildtext .held { color: var(--weiss); max-width: 22ch; }
+.heldbildtext .fliess { color: #e2e9e6; }
+@media (max-width: 40em) {
+  /* Auf dem Telefon wird das Foto zum Deckel und der Text steht darunter:
+     Für Anspruch, Zeile und Knopf wäre über dem Bild kein Platz, und der
+     Verlauf müsste fast das ganze Foto verdunkeln. */
+  .heldbild img { height: 200px; }
+  .heldbildtext { position: static; background: var(--nacht); padding: 22px; }
+}
 .gross { font-size: clamp(1.375rem, 3vw, 1.875rem); font-weight: 800; }
 .fliess { color: var(--grau); }
 .petrol .fliess { color: #cfe0dc; }
@@ -628,14 +649,6 @@ html.dunkel .wareaus { color: #ff9b83; }
 .inwarenkorb .feld { margin: 0; }
 .inwarenkorb select { font: inherit; border: 2px solid var(--linie); border-radius: 12px;
   padding: 11px 14px; background: var(--flaeche); color: var(--text); }
-
-/* Der Warenkorb im Kopf. Die Zahl sitzt auf dem Zeichen; ohne Inhalt ist
-   sie nicht da, statt eine Null zu zeigen. */
-.korbknopf { position: relative; }
-.korbzahl { position: absolute; top: -2px; right: -2px; min-width: 19px; height: 19px;
-  border-radius: 999px; background: var(--gelb); color: var(--nacht);
-  font-size: 0.6875rem; font-weight: 800; line-height: 19px; text-align: center;
-  padding: 0 4px; }
 
 .korbzeile { display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
   padding: 14px 0; border-bottom: 1px solid var(--linie); }

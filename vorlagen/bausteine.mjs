@@ -27,6 +27,19 @@ const arten = {
         ${b.knopf ? `<p style="margin-top: 20px;"><a class="knopf gelb" href="${schuetzen(b.knopf.pfad)}">${schuetzen(b.knopf.titel)}</a></p>` : ''}
       </div>`,
 
+  // Ein grosses Foto über die gesamte Breite, mit dem Anspruch darüber –
+  // so steht es im Entwurf, wo die grüne Kachel durchgestrichen ist. Das
+  // Bild bleibt ein <img> und behält damit seinen Alternativtext; als
+  // Hintergrundbild hätte es keinen.
+  heldbild: (b) => `<div class="kachel heldbild ${spalte(b)}">
+        <img src="/bilder/${schuetzen(b.quelle)}" alt="${schuetzen(b.alt)}" fetchpriority="high">
+        <div class="heldbildtext">
+          <h1 class="held">${schuetzen(b.titel)}</h1>
+          ${b.text ? `<p class="fliess" style="margin-top: 10px; font-size: 18px;">${schuetzen(b.text)}</p>` : ''}
+          ${b.knopf ? `<p style="margin-top: 18px;"><a class="knopf gelb" href="${schuetzen(b.knopf.pfad)}">${schuetzen(b.knopf.titel)}</a></p>` : ''}
+        </div>
+      </div>`,
+
   bild: (b) => `<div class="kachel bild ${spalte(b)}"><img src="/bilder/${schuetzen(b.quelle)}" alt="${schuetzen(b.alt)}" loading="lazy"></div>`,
 
   kachel: (b, hilfe) => {

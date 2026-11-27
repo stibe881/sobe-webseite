@@ -13,11 +13,7 @@
   },
   "menue": [
     {
-      "titel": "Start",
-      "pfad": "/"
-    },
-    {
-      "titel": "Angebot",
+      "titel": "Angebote",
       "pfad": "/angebot/"
     },
     {
@@ -31,6 +27,10 @@
     {
       "titel": "Über uns",
       "pfad": "/ueber-uns/"
+    },
+    {
+      "titel": "Kontakt",
+      "pfad": "/kontakt/"
     },
     {
       "titel": "Jobs",

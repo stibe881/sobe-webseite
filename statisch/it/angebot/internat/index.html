@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- iOS unterstreicht selbst erkannte Adressen und Nummern gepunktet.
+     Im Fuss sah das aus wie ein Fehler; die Telefonnummer ist dort
+     ohnehin schon ein richtiger Verweis. -->
+<meta name="format-detection" content="telephone=no, address=no, date=no, email=no">
+<title>Internato · SONNENBERG</title>
+<meta name="description" content="Gemeinsam Leben im SONNENBERG.">
+<link rel="alternate" hreflang="de" href="/angebot/internat/">
+<link rel="alternate" hreflang="fr" href="/fr/angebot/internat/">
+<link rel="alternate" hreflang="it" href="/it/angebot/internat/">
+<link rel="alternate" hreflang="en" href="/en/angebot/internat/">
+<link rel="alternate" hreflang="x-default" href="/angebot/internat/">
+<!-- Das Zeichen der bisherigen Webseite: der offene Ring aus dem
+     Schriftzug, Petrol auf Weiss. Drei Fassungen, weil kein Format überall
+     reicht – ICO für Älteres, PNG für Neueres, 180 Punkte für den
+     Startbildschirm auf dem iPhone. -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/stil.css">
+<script>
+/* Vor dem ersten Zeichnen: Sonst blitzt die helle Fassung kurz auf, bevor
+   das Skript am Seitenende den Dunkelmodus setzt – gerade für Menschen mit
+   Lichtempfindlichkeit das Gegenteil von hilfreich. */
+try {
+  var z = JSON.parse(localStorage.getItem('sobe.zugang') || '{}');
+  if (z.dunkel) document.documentElement.classList.add('dunkel');
+  if (z.gross) document.documentElement.classList.add('grossschrift');
+} catch (e) { /* Privates Fenster ohne Speicher: dann eben ohne Vorwahl. */ }
+</script>
+</head>
+<body>
+<a class="springen" href="#inhalt">Vai al contenuto</a>
+
+<header class="kopf">
+  <div class="kopfband">
+    <a class="logo" href="/it/" aria-label="SONNENBERG, alla pagina iniziale"><img class="fuerhell" src="/bilder/logo.png" alt="SONNENBERG"><img class="fuerdunkel" src="/bilder/logo-weiss.png" alt="" aria-hidden="true"></a>
+
+    <div class="werkzeuge">
+      <!-- Kein Warenkorb im Kopf: Im Entwurf ist er auf beiden Seiten
+           durchgestrichen. Erreichbar bleibt er trotzdem – der Shop und
+           jede Produktseite verweisen darauf. -->
+      <a class="werkzeug suchknopf-kopf" href="/it/suche/" aria-label="Cerca">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="19" height="19">
+          <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M15.4 15.4L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <!-- Kein eigener Sprachknopf mehr: Die vier Sprachen standen zweimal
+           in derselben Zeile – hier als «DE»-Kreis und gleich daneben im
+           Barrierefreiheits-Feld. Geblieben ist die Zeile im Feld. -->
+      <button id="zugang" class="werkzeug" aria-expanded="false" aria-controls="zugangsfeld" aria-label="Accessibilità · Lingua">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="22" height="22">
+          <circle cx="12" cy="4" r="2" fill="currentColor"/>
+          <path d="M3.5 8.2c2.8.9 5.5 1.3 8.5 1.3s5.7-.4 8.5-1.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 9.5v5m0 0l-3 7m3-7l3 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div id="zugangsfeld" class="zugangsfeld" hidden>
+        <p class="zugangstitel">Accessibilità</p>
+        <button type="button" class="schalter" data-schalter="vorlesen" aria-pressed="false">
+          <span class="schaltertext"><span class="schaltername">Lettura ad alta voce</span><span class="schalterhilfe">Legge ad alta voce il contenuto della pagina.</span></span><span class="ampel" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="schalter" data-schalter="gross" aria-pressed="false">
+          <span class="schaltertext"><span class="schaltername">Testo più grande</span><span class="schalterhilfe">Ingrandisce tutti i testi di un quarto.</span></span><span class="ampel" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="schalter" data-schalter="dunkel" aria-pressed="false">
+          <span class="schaltertext"><span class="schaltername">Modalità scura</span><span class="schalterhilfe">Testo chiaro su sfondo scuro.</span></span><span class="ampel" aria-hidden="true"></span>
+        </button>
+        <p class="zugangsfuss">Le impostazioni restano salvate su questo dispositivo.</p>
+        <!-- Die Sprachwahl steht auch hier, nicht nur im eigenen Knopf: Wer
+             das Feld öffnet, um die Seite lesbarer zu machen, sucht die
+             Sprache am selben Ort. Es sind dieselben Verweise. -->
+        <p class="zugangstitel zweiterteil">Lingua</p>
+        <div class="sprachzeile">
+          <a lang="de" hreflang="de" href="/angebot/internat/">Deutsch</a>
+          <a lang="fr" hreflang="fr" href="/fr/angebot/internat/">Français</a>
+          <a lang="it" hreflang="it" href="/it/angebot/internat/" aria-current="true">Italiano</a>
+          <a lang="en" hreflang="en" href="/en/angebot/internat/">English</a>
+        </div>
+      </div>
+    </div>
+
+    <button id="burger" class="burger" aria-expanded="false" aria-controls="menue" aria-label="Menu">☰</button>
+
+    <nav id="menue" class="menue" aria-label="Navigazione principale">
+      <a href="/it/angebot/" aria-current="page">Angebote</a>
+      <a href="/it/aufnahme/">Ammissione</a>
+      <a href="/it/aktuell/">Attualità</a>
+      <a href="/it/ueber-uns/">Chi siamo</a>
+      <a href="/it/kontakt/">Contatto</a>
+      <a href="/it/jobs/">Lavoro</a>
+      <a href="/it/shop/">Negozio</a>
+      <form class="suchform" role="search" action="/it/suche/" method="get">
+        <label class="nurlesen" for="suchfeld">Cerca in tutto il sito</label>
+        <input id="suchfeld" class="suchfeld" type="search" name="q" placeholder="Cerca" autocomplete="off">
+        <button class="suchknopf" type="submit" aria-label="Cerca">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18">
+            <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M15.4 15.4L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+      <a class="knopf beratung nurschmal" href="/it/aufnahme/">Consulenza</a>
+      <!-- Ohne Bildzeichen: Ein Herz neben dem Wort machte aus dem Knopf in
+           der engen Kopfleiste einen Kreis, aus dem der Text herauslief.
+           Das Wort allein sagt dasselbe und verträgt jede Breite. -->
+      <a class="knopf spende spendenknopf" href="/it/spenden/">Donare</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inhalt">
+  <div class="raster">
+    <div class="kachel petrol s6">
+        <p class="marke"><a href="/it/angebot/">Angebote</a></p>
+        <h1 class="held" style="margin-top: 8px;">Internato</h1>
+        <p class="fliess" style="margin-top: 12px; font-size: 18px;">Gemeinsam Leben im SONNENBERG.</p>
+        
+      </div>
+    <div class="kachel s6"><p class="hinweis" style="margin: 0;">Hinweis an die Redaktion: Für dieses Angebot liegt noch kein Einleitungstext vor. Bis dahin steht hier nur der Titel.</p></div>
+    <div class="kachel s3 gelb">
+        <h2>Fragen zu diesem Angebot?</h2>
+        <p style="margin-top: 8px;">L'Intake ascolta e indica la via.</p>
+        <p class="tel" style="margin-top: 10px;"><a href="tel:+41417677833" style="color: var(--nacht);">041 767 78 33</a></p>
+        <p style="margin-top: 4px;"><a href="mailto:anfrage@sonnenberg-baar.ch" style="color: var(--nacht);">anfrage@sonnenberg-baar.ch</a></p>
+        
+      </div>
+    <div class="kachel s3">
+        <div class="paar" style="justify-content: space-between;">
+          <h2 class="gross" style="max-width: 34ch;">Passt dieses Angebot?</h2>
+          <a class="knopf" href="/it/aufnahme/">All'ammissione</a>
+        </div>
+        
+        
+      </div>
+    <div class="kachel nacht fussk">
+      <img src="/bilder/logo-weiss.png" alt="SONNENBERG">
+      <p class="fussort"><span class="anschrift"><span class="zusammen">Landhausstrasse 20</span><span class="punkt" aria-hidden="true">·</span><span class="zusammen">6340 Baar</span></span><span class="punkt trenner" aria-hidden="true">·</span><a class="hell zusammen" href="tel:+41417677833">041 767 78 33</a></p>
+      <nav class="rechts" aria-label="Note legali"><a href="/it/jobs/">Lavoro</a><a href="/it/impressum/">Colofone</a><a href="/it/datenschutz/">Protezione dei dati</a><a href="/it/barrierefreiheit/">Accessibilità</a></nav>
+    </div>
+  </div>
+</main>
+
+<script>window.SOBE = {"wurzel":"/it/","sprache":"it","gebietsschema":"it-CH","texte":{"Vorlese-Modus":"Lettura ad alta voce","Vorlesen":"Leggi ad alta voce","Pause":"Pausa","Beenden":"Termina","Bereit. Auf «Vorlesen» drücken.":"Pronto. Prema «Leggi ad alta voce».","Liest vor …":"Lettura in corso …","Fertig gelesen.":"Lettura terminata.","Auf dieser Seite ist nichts zu lesen.":"In questa pagina non c'è nulla da leggere.","Dieser Browser kann nicht vorlesen.":"Questo browser non può leggere ad alta voce.","Bitte geben Sie einen Suchbegriff ein.":"Inserisca un termine di ricerca.","Wird gesucht …":"Ricerca in corso …","Keine Treffer für":"Nessun risultato per","Treffer":"risultati","Stelle":"posto","Stellen":"posti","Alle":"Tutti","Eintritt ab":"Entrata in servizio","Zwischensumme":"Subtotale","Versand":"Spese di spedizione","Gesamt":"Totale","Abholung":"Ritiro sul posto","Entfernen":"Rimuovere","Anzahl":"Quantità","Ihr Warenkorb ist leer.":"Il suo carrello è vuoto.","Ist im Warenkorb.":"Aggiunto al carrello.","Wird abgeschickt …":"Invio in corso …","Vielen Dank für Ihre Bestellung.":"Grazie per il suo ordine.","Ihre Bestellnummer":"Il suo numero d'ordine","Stück":"pezzo","Es wird nichts online bezahlt. Wir bestätigen Ihre Bestellung von Hand per E-Mail.":"Non si paga nulla online. Confermiamo il suo ordine a mano per e-mail.","Die Bestellung konnte nicht abgeschickt werden. Bitte später nochmals versuchen.":"Non è stato possibile inviare l'ordine. Riprovi più tardi.","Bitte füllen Sie die mit * bezeichneten Felder aus.":"Compili i campi contrassegnati con *.","Versuchen Sie einen kürzeren Begriff, oder sehen Sie im Menü nach.":"Provi un termine più breve oppure consulti il menu.","Das Verzeichnis konnte nicht geladen werden. Bitte die Seite neu laden.":"Non è stato possibile caricare l'indice. Ricarichi la pagina."}};</script>
+<script src="/seite.js" defer></script>
+</body>
+</html>

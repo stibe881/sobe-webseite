@@ -81,16 +81,9 @@ try {
     <a class="logo" href="${schuetzen(sprache.wurzel)}" aria-label="${schuetzen(einstellungen.name + ', ' + t('zur Startseite'))}"><img class="fuerhell" src="/bilder/logo.png" alt="${schuetzen(einstellungen.name)}"><img class="fuerdunkel" src="/bilder/logo-weiss.png" alt="" aria-hidden="true"></a>
 
     <div class="werkzeuge">
-      <!-- Der Warenkorb steht im Kopf, nicht im Menü: Wer etwas hineingelegt
-           hat, will es jederzeit sehen. Die Zahl setzt das Skript; ohne
-           Skript bleibt der Knopf ein gewöhnlicher Verweis. -->
-      <a class="werkzeug korbknopf" href="${schuetzen(pfadFuer('/warenkorb/', sprache))}" aria-label="${schuetzen(t('Warenkorb'))}">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20">
-          <path d="M4 5h2.2l2.3 10.2h9.1L20 8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="10" cy="19" r="1.5" fill="currentColor"/><circle cx="17" cy="19" r="1.5" fill="currentColor"/>
-        </svg>
-        <span class="korbzahl" id="korbzahl" hidden></span>
-      </a>
+      <!-- Kein Warenkorb im Kopf: Im Entwurf ist er auf beiden Seiten
+           durchgestrichen. Erreichbar bleibt er trotzdem – der Shop und
+           jede Produktseite verweisen darauf. -->
       <a class="werkzeug suchknopf-kopf" href="${schuetzen(pfadFuer('/suche/', sprache))}" aria-label="${schuetzen(t('Suchen'))}">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="19" height="19">
           <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>

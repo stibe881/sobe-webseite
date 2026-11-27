@@ -52,33 +52,12 @@
   {
     "pfad": "/angebot/",
     "titel": "Angebote",
-    "beschreibung": "Neun Angebote des SONNENBERG – Schule, Internat, Therapie und Wohnen.",
+    "beschreibung": "Die Angebote des SONNENBERG – Schule, Therapie, Beratung und Wissen.",
     "bausteine": [
       {
         "art": "held",
         "spalten": 6,
         "titel": "Angebote"
-      },
-      {
-        "art": "kachel",
-        "spalten": 2,
-        "titel": "Verhalten und Sprache",
-        "ziel": "/angebot/verhalten-und-sprache/",
-        "text": "Lernen in individuellen Settings."
-      },
-      {
-        "art": "kachel",
-        "spalten": 2,
-        "titel": "Verhalten Plus",
-        "ziel": "/angebot/verhalten-plus/",
-        "text": "Förderung in einem bedarfsgerechten Lernumfeld."
-      },
-      {
-        "art": "kachel",
-        "spalten": 2,
-        "titel": "Tagesambulatorium",
-        "ziel": "/angebot/tagesambulatorium/",
-        "text": "Psychotherapeutisch begleitetes Schulsetting."
       },
       {
         "art": "kachel",
@@ -97,16 +76,30 @@
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "HFE",
-        "ziel": "/angebot/hfe/",
-        "text": "Spezifische Frühförderung zu Hause."
+        "titel": "Erwachsene Sehen Plus",
+        "ziel": "/angebot/erwachsene-sehen-plus/",
+        "text": "Wohnen und Tagesstruktur für Mehrfachbeeinträchtige Erwachsene."
       },
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Internat",
-        "ziel": "/angebot/internat/",
-        "text": "Gemeinsam Leben im SONNENBERG."
+        "titel": "Verhalten und Sprache",
+        "ziel": "/angebot/verhalten-und-sprache/",
+        "text": "Lernen in individuellen Settings."
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Verhalten Plus",
+        "ziel": "/angebot/verhalten-plus/",
+        "text": "Förderung in einem bedarfsgerechten Lernumfeld."
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Fachstelle Sehen",
+        "ziel": "/angebot/fachstelle-sehen/",
+        "text": "Die zentrale Anlaufstelle für alle Fragen rund um das funktionale Sehvermögen."
       },
       {
         "art": "kachel",
@@ -118,9 +111,9 @@
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Erwachsene Sehen Plus",
-        "ziel": "/angebot/erwachsene-sehen-plus/",
-        "text": "Wohnen und Tagesstruktur für Mehrfachbeeinträchtige Erwachsene."
+        "titel": "Wissen",
+        "ziel": "/angebot/wissen/",
+        "text": "Medienzentrum und Bildungszentrum unter einem Dach."
       }
     ]
   },
@@ -337,22 +330,6 @@
         "spalten": 2,
         "quelle": "malen.jpg",
         "alt": "Eine Hand malt mit Pinsel und grüner Farbe"
-      },
-      {
-        "art": "text",
-        "spalten": 3,
-        "titel": "Fachstelle Sehen",
-        "absaetze": [
-          "Die Fachstelle Sehen ist die zentrale Anlaufstelle für Betroffene, Familien, Schulen und Fachpersonen bei allen Fragen rund um das funktionale Sehvermögen. Mittels fundierter Low-Vision-Einschätzungen, Hilfsmittelberatung und Schulung des Restsehvermögens schaffen unsere Spezialist*innen ideale Bedingungen für Alltag, Schule und Beruf. Durch gezielte Sensibilisierung und fachliche Beratung stärken wir das Umfeld für eine nachhaltige Entwicklung."
-        ]
-      },
-      {
-        "art": "text",
-        "spalten": 3,
-        "titel": "Wissen",
-        "absaetze": [
-          "Das Angebot Wissen vereint Medienzentrum und Bildungszentrum zu einer zentralen Plattform für Fachkompetenz und sonderpädagogische Materialien. Das Medienzentrum stellt Lehrmittel und vielfältige Medien bereit und bietet sowohl Mitarbeitenden als auch Schüler*innen passende Bibliotheksangebote. Das Bildungszentrum koordiniert Weiterbildungen und fördert den Wissenstransfer. So entsteht eine zukunftsorientierte Lernumgebung für interne und externe Fachpersonen."
-        ]
       },
       {
         "art": "kachel",
@@ -769,43 +746,6 @@
     ]
   },
   {
-    "pfad": "/angebot/tagesambulatorium/",
-    "titel": "Tagesambulatorium",
-    "beschreibung": "Psychotherapeutisch begleitetes Schulsetting.",
-    "bausteine": [
-      {
-        "art": "held",
-        "spalten": 6,
-        "marke": "Angebote",
-        "markeZiel": "/angebot/",
-        "titel": "Tagesambulatorium",
-        "text": "Psychotherapeutisch begleitetes Schulsetting."
-      },
-      {
-        "art": "hinweis",
-        "spalten": 6,
-        "text": "Hinweis an die Redaktion: Für dieses Angebot liegt noch kein Einleitungstext vor. Bis dahin steht hier nur der Titel."
-      },
-      {
-        "art": "kontakt",
-        "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
-        "intake": true
-      },
-      {
-        "art": "aufruf",
-        "spalten": 3,
-        "titel": "Passt dieses Angebot?",
-        "knopf": {
-          "titel": "Zur Aufnahme",
-          "pfad": "/aufnahme/"
-        }
-      }
-    ]
-  },
-  {
     "pfad": "/angebot/sehen-plus/",
     "titel": "Sehen Plus",
     "beschreibung": "Sehen Plus begleitet sehbeeinträchtigte und blinde Kinder und Jugendliche mit zusätzlichen kognitiven oder mehrfachen Beeinträchtigungen vom 4. bis zum 20.",
@@ -825,80 +765,6 @@
         "absaetze": [
           "Sehen Plus begleitet sehbeeinträchtigte und blinde Kinder und Jugendliche mit zusätzlichen kognitiven oder mehrfachen Beeinträchtigungen vom 4. bis zum 20. Lebensjahr. In einem geschützten, strukturierten Umfeld entdecken und begreifen die Klient*innen ihre Lebenswelt ganzheitlich und handelnd. Die interdisziplinäre Förderung in Schule und Internat stärkt individuelle Fähigkeiten, schafft Orientierung und eröffnet verlässliche Lebensperspektiven."
         ]
-      },
-      {
-        "art": "kontakt",
-        "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
-        "intake": true
-      },
-      {
-        "art": "aufruf",
-        "spalten": 3,
-        "titel": "Passt dieses Angebot?",
-        "knopf": {
-          "titel": "Zur Aufnahme",
-          "pfad": "/aufnahme/"
-        }
-      }
-    ]
-  },
-  {
-    "pfad": "/angebot/hfe/",
-    "titel": "HFE",
-    "beschreibung": "Spezifische Frühförderung zu Hause.",
-    "bausteine": [
-      {
-        "art": "held",
-        "spalten": 6,
-        "marke": "Angebote",
-        "markeZiel": "/angebot/",
-        "titel": "HFE",
-        "text": "Spezifische Frühförderung zu Hause."
-      },
-      {
-        "art": "hinweis",
-        "spalten": 6,
-        "text": "Hinweis an die Redaktion: Für dieses Angebot liegt noch kein Einleitungstext vor. Bis dahin steht hier nur der Titel."
-      },
-      {
-        "art": "kontakt",
-        "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
-        "intake": true
-      },
-      {
-        "art": "aufruf",
-        "spalten": 3,
-        "titel": "Passt dieses Angebot?",
-        "knopf": {
-          "titel": "Zur Aufnahme",
-          "pfad": "/aufnahme/"
-        }
-      }
-    ]
-  },
-  {
-    "pfad": "/angebot/internat/",
-    "titel": "Internat",
-    "beschreibung": "Gemeinsam Leben im SONNENBERG.",
-    "bausteine": [
-      {
-        "art": "held",
-        "spalten": 6,
-        "marke": "Angebote",
-        "markeZiel": "/angebot/",
-        "titel": "Internat",
-        "text": "Gemeinsam Leben im SONNENBERG."
-      },
-      {
-        "art": "hinweis",
-        "spalten": 6,
-        "text": "Hinweis an die Redaktion: Für dieses Angebot liegt noch kein Einleitungstext vor. Bis dahin steht hier nur der Titel."
       },
       {
         "art": "kontakt",
@@ -978,6 +844,86 @@
         "titel": "Das Angebot",
         "absaetze": [
           "Erwachsene Sehen Plus bietet erwachsenen Menschen mit Sehbeeinträchtigung oder Blindheit und Mehrfachbeeinträchtigung ein bedürfnisorientiertes Wohn- und Beschäftigungsangebot. Am Standort Menzingen steht das begleitete Wohnen im Zentrum, während am Standort Baar die Tagesstruktur gelebt wird. Erfahrene Fachpersonen fördern lebenspraktische Fertigkeiten, stärken die Selbstbestimmung und begleiten die Klient*innen verlässlich zu sozialer Teilhabe."
+        ]
+      },
+      {
+        "art": "kontakt",
+        "spalten": 3,
+        "farbe": "gelb",
+        "titel": "Fragen zu diesem Angebot?",
+        "text": "Das Intake hört zu und hilft weiter.",
+        "intake": true
+      },
+      {
+        "art": "aufruf",
+        "spalten": 3,
+        "titel": "Passt dieses Angebot?",
+        "knopf": {
+          "titel": "Zur Aufnahme",
+          "pfad": "/aufnahme/"
+        }
+      }
+    ]
+  },
+  {
+    "pfad": "/angebot/fachstelle-sehen/",
+    "titel": "Fachstelle Sehen",
+    "beschreibung": "Die Fachstelle Sehen ist die zentrale Anlaufstelle für Betroffene, Familien, Schulen und Fachpersonen bei allen Fragen rund um das funktionale Sehvermögen.",
+    "bausteine": [
+      {
+        "art": "held",
+        "spalten": 6,
+        "marke": "Angebote",
+        "markeZiel": "/angebot/",
+        "titel": "Fachstelle Sehen",
+        "text": "Die zentrale Anlaufstelle für alle Fragen rund um das funktionale Sehvermögen."
+      },
+      {
+        "art": "text",
+        "spalten": 6,
+        "titel": "Das Angebot",
+        "absaetze": [
+          "Die Fachstelle Sehen ist die zentrale Anlaufstelle für Betroffene, Familien, Schulen und Fachpersonen bei allen Fragen rund um das funktionale Sehvermögen. Mittels fundierter Low-Vision-Einschätzungen, Hilfsmittelberatung und Schulung des Restsehvermögens schaffen unsere Spezialist*innen ideale Bedingungen für Alltag, Schule und Beruf. Durch gezielte Sensibilisierung und fachliche Beratung stärken wir das Umfeld für eine nachhaltige Entwicklung."
+        ]
+      },
+      {
+        "art": "kontakt",
+        "spalten": 3,
+        "farbe": "gelb",
+        "titel": "Fragen zu diesem Angebot?",
+        "text": "Das Intake hört zu und hilft weiter.",
+        "intake": true
+      },
+      {
+        "art": "aufruf",
+        "spalten": 3,
+        "titel": "Passt dieses Angebot?",
+        "knopf": {
+          "titel": "Zur Aufnahme",
+          "pfad": "/aufnahme/"
+        }
+      }
+    ]
+  },
+  {
+    "pfad": "/angebot/wissen/",
+    "titel": "Wissen",
+    "beschreibung": "Das Angebot Wissen vereint Medienzentrum und Bildungszentrum zu einer zentralen Plattform für Fachkompetenz und sonderpädagogische Materialien.",
+    "bausteine": [
+      {
+        "art": "held",
+        "spalten": 6,
+        "marke": "Angebote",
+        "markeZiel": "/angebot/",
+        "titel": "Wissen",
+        "text": "Medienzentrum und Bildungszentrum unter einem Dach."
+      },
+      {
+        "art": "text",
+        "spalten": 6,
+        "titel": "Das Angebot",
+        "absaetze": [
+          "Das Angebot Wissen vereint Medienzentrum und Bildungszentrum zu einer zentralen Plattform für Fachkompetenz und sonderpädagogische Materialien. Das Medienzentrum stellt Lehrmittel und vielfältige Medien bereit und bietet sowohl Mitarbeitenden als auch Schüler*innen passende Bibliotheksangebote. Das Bildungszentrum koordiniert Weiterbildungen und fördert den Wissenstransfer. So entsteht eine zukunftsorientierte Lernumgebung für interne und externe Fachpersonen."
         ]
       },
       {

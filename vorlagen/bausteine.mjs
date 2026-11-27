@@ -47,6 +47,7 @@ const arten = {
     return `<div class="kachel ${spalte(b)}${farbe(b)}${b.ziel ? ' klickbar' : ''}"${b.ziel ? ` data-ziel="${schuetzen(b.ziel)}"` : ''}>
         <h2>${titel}</h2>
         ${b.text ? `<p class="fliess" style="margin-top: 8px;">${schuetzen(b.text)}</p>` : ''}
+        ${b.knopf ? `<p style="margin-top: 16px;"><a class="knopf${b.farbe === 'gelb' ? '' : ' gelb'}" href="${schuetzen(b.knopf.pfad)}">${schuetzen(b.knopf.titel)}</a></p>` : ''}
         ${b.links?.length ? `<div class="liste">${b.links.map((l) =>
           // Ist die Kachel selbst anklickbar, sind die Zeilen darin keine
           // eigenen Verweise, sondern eine Aufzählung dessen, was hinter
@@ -75,10 +76,13 @@ const arten = {
         <p class="fliess" style="margin-top: 4px;"><a href="mailto:${schuetzen(b.mail)}">${schuetzen(b.mail)}</a> · <a href="tel:${schuetzen(einstellungen.telefonWahl)}">${schuetzen(einstellungen.telefon)}</a></p>
       </div>`,
 
+  // Eine Datei liegt normalerweise unter /dateien/. Liegt sie anderswo –
+  // das Spendenreglement etwa noch auf der alten Webseite –, steht die
+  // vollständige Adresse da und wird unverändert übernommen.
   dokumente: (b) => `<div class="kachel ${spalte(b)}">
         <h2>${schuetzen(b.titel)}</h2>
         <div style="margin-top: 8px;">${(b.eintraege || []).map((d) => `
-          <div class="reihe"><div class="inhalt">${d.datei ? `<a href="/dateien/${schuetzen(d.datei)}">${schuetzen(d.titel)}</a>` : `<span class="fliess">${schuetzen(d.titel)}</span>`}</div><div class="datum" style="width: auto; text-align: right;">PDF</div></div>`).join('')}
+          <div class="reihe"><div class="inhalt">${d.datei ? `<a href="${schuetzen(/^https?:/i.test(d.datei) ? d.datei : '/dateien/' + d.datei)}">${schuetzen(d.titel)}</a>` : `<span class="fliess">${schuetzen(d.titel)}</span>`}</div><div class="datum" style="width: auto; text-align: right;">PDF</div></div>`).join('')}
         </div>
       </div>`,
 

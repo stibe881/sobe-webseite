@@ -415,31 +415,112 @@
   {
     "pfad": "/spenden/",
     "titel": "Spenden",
-    "beschreibung": "In drei Schritten spenden – einmalig oder monatlich.",
+    "beschreibung": "Mit einer Spende unterstützen Sie Kinder, Jugendliche und Erwachsene im SONNENBERG.",
     "bausteine": [
       {
         "art": "held",
         "spalten": 6,
         "marke": "Unterstützen",
-        "titel": "Spenden",
-        "text": "Betrag wählen, Angaben eintragen, fertig. Einmalig oder monatlich."
-      },
-      {
-        "art": "spende",
-        "spalten": 4
+        "titel": "Spenden"
       },
       {
         "art": "text",
-        "spalten": 2,
-        "titel": "Wofür Ihre Spende eingesetzt wird",
+        "spalten": 3,
+        "titel": "Spendenkonto",
         "absaetze": [
-          "[Bitte ergänzen: Wofür werden Spenden verwendet? Zwei bis drei Sätze, möglichst konkret – was wird damit möglich, das sonst nicht möglich wäre.]",
-          "[Bitte ergänzen: Ob und in welchen Kantonen Spenden an den SONNENBERG von den Steuern abgezogen werden können. Diese Angabe erst aufschalten, wenn sie geprüft ist.]"
+          "CH27 0900 0000 5080 0000 9"
+        ]
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "farbe": "gelb",
+        "titel": "Online spenden",
+        "text": "Einmalig oder regelmässig – die Zahlung läuft über RaiseNow.",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/rnhfr"
+        }
+      },
+      {
+        "art": "text",
+        "spalten": 6,
+        "titel": "Was bewirken Sie mit Ihrer Spende?"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "CHF 50",
+        "text": "Mit CHF 50 schenken Sie Farben und Materialen für unser Kunstlabor – Kreativität, die begeistert.",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/zvngt"
+        }
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "CHF 100",
+        "text": "Mit CHF 100 ermöglichen Sie einem Kind die Teilnahme am Skilager – Gemeinschaft und Bewegung für alle!",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/wyqgn"
+        }
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "CHF 150",
+        "text": "Mit CHF 150 helfen Sie, Spezial- und Therapiebetten zu finanzieren – für mehr Komfort und Lebensqualität im Alltag.",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/ydwbc"
+        }
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Allgemeine Spende",
+        "text": "",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/hxqzr"
+        }
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Lager und Ausflüge",
+        "text": "",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/nxmfj"
+        }
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Erlebnis und Kultur",
+        "text": "",
+        "knopf": {
+          "titel": "Jetzt spenden",
+          "pfad": "https://donate.raisenow.io/nfyps"
+        }
+      },
+      {
+        "art": "dokumente",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "eintraege": [
+          {
+            "titel": "Spendenreglement",
+            "datei": "https://www.sonnenberg-baar.ch/wp-content/uploads/2026/04/251215-Spendenreglement.pdf"
+          }
         ]
       },
       {
         "art": "kontakt",
-        "spalten": 2,
+        "spalten": 3,
         "farbe": "petrol",
         "titel": "Fragen zu einer Spende",
         "text": "Auch zu grösseren Zuwendungen und zu Legaten geben wir gerne Auskunft.",
@@ -448,7 +529,7 @@
       {
         "art": "hinweis",
         "spalten": 6,
-        "text": "Hinweis an die Redaktion: Die mit [ ] markierten Stellen stehen in inhalt/einstellungen.json unter «spenden» und in dieser Seite. Spendenkonto, Verwendungszweck und Steuerabzug sind bewusst leer – falsche Angaben auf einer Spendenseite wären schlimmer als gar keine. Die Online-Zahlung wird scharfgeschaltet, sobald unter «zahlungsziel» die Adresse des Zahlungsdienstleisters steht."
+        "text": "Hinweis an die Redaktion: Übernommen von der bestehenden Webseite sind die Beträge, die drei Themen, das Spendenkonto, das Spendenreglement und die sieben Verweise zu RaiseNow. Nicht übernommen sind die beiden Fliesstexte («Individuelle Förderung mit Herz» samt dem Zitat von Lara und der Absatz unter «Was bewirken Sie mit Ihrer Spende?») – sie liessen sich nicht wortgenau auslesen und wurden darum nicht nachgeschrieben. Bitte von der alten Seite einfügen. Ebenso fehlt die Ansprechperson für Spenden und der Hinweis zum Steuerabzug."
       }
     ]
   },

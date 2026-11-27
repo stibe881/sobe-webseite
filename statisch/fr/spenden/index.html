@@ -8,7 +8,7 @@
      ohnehin schon ein richtiger Verweis. -->
 <meta name="format-detection" content="telephone=no, address=no, date=no, email=no">
 <title>Faire un don · SONNENBERG</title>
-<meta name="description" content="Faire un don en trois étapes – une fois ou chaque mois.">
+<meta name="description" content="Mit einer Spende unterstützen Sie Kinder, Jugendliche und Erwachsene im SONNENBERG.">
 <link rel="alternate" hreflang="de" href="/spenden/">
 <link rel="alternate" hreflang="fr" href="/fr/spenden/">
 <link rel="alternate" hreflang="it" href="/it/spenden/">
@@ -119,186 +119,75 @@ try {
     <div class="kachel petrol s6">
         <p class="marke">Soutenir</p>
         <h1 class="held" style="margin-top: 8px;">Faire un don</h1>
-        <p class="fliess" style="margin-top: 12px; font-size: 18px;">Choisir le montant, saisir les données, c'est fait. Une fois ou chaque mois.</p>
+        
         
       </div>
-    <div class="kachel s4 spendenkachel">
-      <form id="spendenform" class="spende" method="post">
-
-        <fieldset class="schrittfeld">
-          <legend><span class="schrittzahl">1</span> Votre contribution</legend>
-
-          <div class="umschalter" role="radiogroup" aria-label="Fréquence">
-            <label><input type="radio" name="intervall" value="einmalig" checked><span>Unique</span></label>
-            <label><input type="radio" name="intervall" value="monatlich"><span>Mensuel</span></label>
-          </div>
-
-          <div class="betraege" id="betraege-einmalig">
-            
-            <label class="betrag">
-              <input type="radio" name="betrag" value="30" data-art="einmalig">
-              <span class="betragzahl">30</span>
-            </label>
-            <label class="betrag">
-              <input type="radio" name="betrag" value="50" data-art="einmalig" checked>
-              <span class="betragzahl">50</span>
-            </label>
-            <label class="betrag">
-              <input type="radio" name="betrag" value="100" data-art="einmalig">
-              <span class="betragzahl">100</span>
-            </label>
-            <label class="betrag">
-              <input type="radio" name="betrag" value="250" data-art="einmalig">
-              <span class="betragzahl">250</span>
-            </label>
-            <label class="betrag frei">
-              <input type="radio" name="betrag" value="frei" data-art="einmalig">
-              <span class="betragzahl">Autre</span>
-            </label>
-          </div>
-          <div class="betraege" id="betraege-monatlich" hidden>
-            
-            <label class="betrag">
-              <input type="radio" name="betrag" value="10" data-art="monatlich" disabled>
-              <span class="betragzahl">10</span>
-            </label>
-            <label class="betrag">
-              <input type="radio" name="betrag" value="20" data-art="monatlich" disabled>
-              <span class="betragzahl">20</span>
-            </label>
-            <label class="betrag">
-              <input type="radio" name="betrag" value="40" data-art="monatlich" disabled>
-              <span class="betragzahl">40</span>
-            </label>
-            <label class="betrag">
-              <input type="radio" name="betrag" value="80" data-art="monatlich" disabled>
-              <span class="betragzahl">80</span>
-            </label>
-            <label class="betrag frei">
-              <input type="radio" name="betrag" value="frei" data-art="monatlich" disabled>
-              <span class="betragzahl">Autre</span>
-            </label>
-          </div>
-
-          <!-- Ohne «hidden» im Markup: Fällt das Skript aus, sind Feld und
-               Kontoangaben sichtbar statt für immer verborgen. Das Skript
-               blendet sie beim Laden aus und bei Bedarf wieder ein. -->
-          <p class="feld freibetrag" id="freibetrag">
-            <label for="f-eigenerbetrag">Montant libre en francs</label>
-            <input id="f-eigenerbetrag" name="eigenerbetrag" type="number" min="1" step="1" inputmode="numeric">
-          </p>
-        </fieldset>
-
-        <fieldset class="schrittfeld">
-          <legend><span class="schrittzahl">2</span> Affectation</legend>
-          <div class="wahlreihe">
-          <label class="wahlkarte">
-            <input type="radio" name="zweck" value="allgemein" checked>
-            <span class="wahltext"><span class="wahlname">Wo es am nötigsten ist</span>
-              <span class="wahlhilfe">Wir setzen Ihre Spende dort ein, wo sie am meisten bewirkt.</span></span>
-          </label>
-          <label class="wahlkarte">
-            <input type="radio" name="zweck" value="projekt">
-            <span class="wahltext"><span class="wahlname">[Bitte ergänzen: Projekt]</span>
-              <span class="wahlhilfe">[Bitte ergänzen: Wofür genau. Nur aufführen, wenn es das Projekt wirklich gibt.]</span></span>
-          </label></div>
-        </fieldset>
-
-        <fieldset class="schrittfeld">
-          <legend><span class="schrittzahl">3</span> Moyen de paiement</legend>
-          <div class="wahlreihe">
-          <label class="wahlkarte schmal">
-            <input type="radio" name="zahlungsart" value="twint" checked>
-            <span class="wahltext"><span class="wahlname">TWINT</span>
-              </span>
-          </label>
-          <label class="wahlkarte schmal">
-            <input type="radio" name="zahlungsart" value="karte">
-            <span class="wahltext"><span class="wahlname">Kreditkarte</span>
-              </span>
-          </label>
-          <label class="wahlkarte schmal">
-            <input type="radio" name="zahlungsart" value="postfinance">
-            <span class="wahltext"><span class="wahlname">PostFinance</span>
-              </span>
-          </label>
-          <label class="wahlkarte schmal">
-            <input type="radio" name="zahlungsart" value="ueberweisung">
-            <span class="wahltext"><span class="wahlname">Überweisung</span>
-              <span class="wahlhilfe">Ohne Gebühren für uns – Sie tragen die Angaben in Ihr E-Banking ein.</span></span>
-          </label></div>
-
-          <div class="kontoangaben" id="kontoangaben">
-            <p class="marke">Notre compte de dons</p>
-            <p><strong>[Bitte ergänzen: Kontoinhaber]</strong></p>
-            <p class="iban">[Bitte ergänzen: IBAN]</p>
-            <p class="fliess">[Bitte ergänzen: Bank und Ort]</p>
-          </div>
-        </fieldset>
-
-        <fieldset class="schrittfeld">
-          <legend><span class="schrittzahl">4</span> Vos coordonnées</legend>
-          <p class="fliess kleinerhinweis">Pour l'attestation de don. Si vous n'en avez pas besoin, l'adresse e-mail suffit.</p>
-          <div class="felder">
-            
-            <p class="feld">
-              <label for="f-vorname">Prénom</label>
-              <input id="f-vorname" name="vorname" type="text" autocomplete="given-name">
-            </p>
-            
-            <p class="feld">
-              <label for="f-name">Nom</label>
-              <input id="f-name" name="name" type="text" autocomplete="family-name">
-            </p>
-            
-            <p class="feld breit">
-              <label for="f-strasse">Rue et numéro</label>
-              <input id="f-strasse" name="strasse" type="text" autocomplete="street-address">
-            </p>
-            
-            <p class="feld">
-              <label for="f-plz">NPA</label>
-              <input id="f-plz" name="plz" type="text" autocomplete="postal-code">
-            </p>
-            
-            <p class="feld">
-              <label for="f-ort">Localité</label>
-              <input id="f-ort" name="ort" type="text" autocomplete="address-level2">
-            </p>
-            
-            <p class="feld breit">
-              <label for="f-mail">E-mail <span class="pflicht" aria-hidden="true">*</span></label>
-              <input id="f-mail" name="mail" type="email" autocomplete="email" required>
-            </p>
-          </div>
-          <p class="haken">
-            <label><input type="checkbox" name="bescheinigung" value="ja"> Je souhaite une attestation de don</label>
-          </p>
-          <p class="haken">
-            <label><input type="checkbox" name="anonym" value="ja"> Mon don ne doit pas être mentionné publiquement</label>
-          </p>
-        </fieldset>
-
-        <div class="abschluss">
-          <p class="summe" id="spendensumme" role="status" aria-live="polite">Votre don: <strong>CHF 50</strong> unique</p>
-          <p class="hinweis" id="nochkeinweg">Le paiement en ligne n'est pas encore en place – il manque le contrat avec un prestataire de paiement. En attendant, le don passe par un virement ou par <a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a>.</p>
-             <a class="knopf spende spendenknopf" id="spendenmail" href="mailto:info@sonnenberg-baar.ch">Annoncer le don par e-mail</a>
-        </div>
-      </form>
-    </div>
+    <div class="kachel s3">
+        <h2>Spendenkonto</h2>
+        
+        <p class="fliess" style="margin-top: 12px;">CH27 0900 0000 5080 0000 9</p>
+      </div>
+    <div class="kachel s3 gelb">
+        <h2>Online spenden</h2>
+        <p class="fliess" style="margin-top: 8px;">Einmalig oder regelmässig – die Zahlung läuft über RaiseNow.</p>
+        <p style="margin-top: 16px;"><a class="knopf" href="https://donate.raisenow.io/rnhfr">Jetzt spenden</a></p>
+        
+      </div>
+    <div class="kachel s6">
+        <h2>Was bewirken Sie mit Ihrer Spende?</h2>
+        
+        
+      </div>
     <div class="kachel s2">
-        <h2>À quoi sert votre don</h2>
+        <h2>CHF 50</h2>
+        <p class="fliess" style="margin-top: 8px;">Mit CHF 50 schenken Sie Farben und Materialen für unser Kunstlabor – Kreativität, die begeistert.</p>
+        <p style="margin-top: 16px;"><a class="knopf gelb" href="https://donate.raisenow.io/zvngt">Jetzt spenden</a></p>
         
-        <p class="fliess" style="margin-top: 12px;">[À compléter : à quoi servent les dons ? Deux à trois phrases, aussi concrètes que possible – ce qu'ils rendent possible et qui ne le serait pas autrement.]</p><p class="fliess" style="margin-top: 12px;">[À compléter : si et dans quels cantons les dons au SONNENBERG sont déductibles des impôts. Ne publier cette indication qu'une fois vérifiée.]</p>
       </div>
-    <div class="kachel s2 petrol">
+    <div class="kachel s2">
+        <h2>CHF 100</h2>
+        <p class="fliess" style="margin-top: 8px;">Mit CHF 100 ermöglichen Sie einem Kind die Teilnahme am Skilager – Gemeinschaft und Bewegung für alle!</p>
+        <p style="margin-top: 16px;"><a class="knopf gelb" href="https://donate.raisenow.io/wyqgn">Jetzt spenden</a></p>
+        
+      </div>
+    <div class="kachel s2">
+        <h2>CHF 150</h2>
+        <p class="fliess" style="margin-top: 8px;">Mit CHF 150 helfen Sie, Spezial- und Therapiebetten zu finanzieren – für mehr Komfort und Lebensqualität im Alltag.</p>
+        <p style="margin-top: 16px;"><a class="knopf gelb" href="https://donate.raisenow.io/ydwbc">Jetzt spenden</a></p>
+        
+      </div>
+    <div class="kachel s2">
+        <h2>Allgemeine Spende</h2>
+        
+        <p style="margin-top: 16px;"><a class="knopf gelb" href="https://donate.raisenow.io/hxqzr">Jetzt spenden</a></p>
+        
+      </div>
+    <div class="kachel s2">
+        <h2>Lager und Ausflüge</h2>
+        
+        <p style="margin-top: 16px;"><a class="knopf gelb" href="https://donate.raisenow.io/nxmfj">Jetzt spenden</a></p>
+        
+      </div>
+    <div class="kachel s2">
+        <h2>Erlebnis und Kultur</h2>
+        
+        <p style="margin-top: 16px;"><a class="knopf gelb" href="https://donate.raisenow.io/nfyps">Jetzt spenden</a></p>
+        
+      </div>
+    <div class="kachel s3">
+        <h2>Documents</h2>
+        <div style="margin-top: 8px;">
+          <div class="reihe"><div class="inhalt"><a href="https://www.sonnenberg-baar.ch/wp-content/uploads/2026/04/251215-Spendenreglement.pdf">Spendenreglement</a></div><div class="datum" style="width: auto; text-align: right;">PDF</div></div>
+        </div>
+      </div>
+    <div class="kachel s3 petrol">
         <h2>Questions sur un don</h2>
         <p style="margin-top: 8px;">Nous renseignons volontiers aussi sur les dons importants et les legs.</p>
         <p class="tel" style="margin-top: 10px;"><a href="tel:+41417677833">041 767 78 33</a></p>
         <p style="margin-top: 4px;"><a href="mailto:info@sonnenberg-baar.ch">info@sonnenberg-baar.ch</a></p>
         <p style="margin-top: 8px;">Landhausstrasse 20 · 6340 Baar</p>
       </div>
-    <div class="kachel s6"><p class="hinweis" style="margin: 0;">Note à la rédaction : les passages marqués [ ] se trouvent dans inhalt/einstellungen.json sous « spenden » et dans cette page. Le compte de dons, l'affectation et la déduction fiscale sont volontairement vides – de fausses indications sur une page de dons seraient pires que pas d'indication du tout. Le paiement en ligne est activé dès qu'une adresse de prestataire de paiement figure sous « zahlungsziel ».</p></div>
+    <div class="kachel s6"><p class="hinweis" style="margin: 0;">Hinweis an die Redaktion: Übernommen von der bestehenden Webseite sind die Beträge, die drei Themen, das Spendenkonto, das Spendenreglement und die sieben Verweise zu RaiseNow. Nicht übernommen sind die beiden Fliesstexte («Individuelle Förderung mit Herz» samt dem Zitat von Lara und der Absatz unter «Was bewirken Sie mit Ihrer Spende?») – sie liessen sich nicht wortgenau auslesen und wurden darum nicht nachgeschrieben. Bitte von der alten Seite einfügen. Ebenso fehlt die Ansprechperson für Spenden und der Hinweis zum Steuerabzug.</p></div>
     <div class="kachel nacht fussk">
       <img src="/bilder/logo-weiss.png" alt="SONNENBERG">
       <p class="fussort"><span class="anschrift"><span class="zusammen">Landhausstrasse 20</span><span class="punkt" aria-hidden="true">·</span><span class="zusammen">6340 Baar</span></span><span class="punkt trenner" aria-hidden="true">·</span><a class="hell zusammen" href="tel:+41417677833">041 767 78 33</a></p>

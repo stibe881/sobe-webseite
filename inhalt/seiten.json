@@ -62,35 +62,35 @@
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Sehen",
+        "titel": "Angebot «Sehen»",
         "ziel": "/angebot/sehen/",
         "text": "Bedarfsgerechte Lernformen für blinde und sehbeeinträchtigte Menschen."
       },
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Sehen Plus",
+        "titel": "Angebot «Sehen Plus»",
         "ziel": "/angebot/sehen-plus/",
         "text": "Individuelle Entwicklung der jeweiligen Mehrfach-Beeinträchtigungen entsprechend."
       },
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Erwachsene Sehen Plus",
+        "titel": "Angebot «Erwachsene Sehen Plus»",
         "ziel": "/angebot/erwachsene-sehen-plus/",
         "text": "Wohnen und Tagesstruktur für Mehrfachbeeinträchtige Erwachsene."
       },
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Verhalten und Sprache",
+        "titel": "Angebot «Verhalten und Sprache»",
         "ziel": "/angebot/verhalten-und-sprache/",
         "text": "Lernen in individuellen Settings."
       },
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Verhalten Plus",
+        "titel": "Angebot «Verhalten Plus»",
         "ziel": "/angebot/verhalten-plus/",
         "text": "Förderung in einem bedarfsgerechten Lernumfeld."
       },
@@ -104,14 +104,14 @@
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Therapie & Gesundheit",
+        "titel": "Angebot Therapie & Gesundheit",
         "ziel": "/angebot/therapie-und-gesundheit/",
         "text": "Vielfältiges Therapieangebot und qualifiziertes Medikamentenmanagement."
       },
       {
         "art": "kachel",
         "spalten": 2,
-        "titel": "Wissen",
+        "titel": "Angebot Wissen",
         "ziel": "/angebot/wissen/",
         "text": "Medienzentrum und Bildungszentrum unter einem Dach."
       }
@@ -119,16 +119,16 @@
   },
   {
     "pfad": "/angebot/sehen/",
-    "titel": "Sehen",
+    "titel": "Angebot «Sehen»",
     "beschreibung": "Schule und Beratung für blinde und sehbeeinträchtigte Kinder und Jugendliche.",
     "bausteine": [
       {
         "art": "held",
         "spalten": 4,
-        "marke": "Angebot",
+        "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Sehen",
-        "text": "Schule und Beratung für blinde und sehbeeinträchtigte Kinder und Jugendliche – von der Primarschule bis zur Berufsintegration."
+        "titel": "Angebot «Sehen»",
+        "text": "Bedarfsgerechte Lernformen für blinde und sehbeeinträchtigte Menschen."
       },
       {
         "art": "bild",
@@ -667,16 +667,22 @@
   },
   {
     "pfad": "/angebot/verhalten-und-sprache/",
-    "titel": "Verhalten und Sprache",
+    "titel": "Angebot «Verhalten und Sprache»",
     "beschreibung": "Dieses Angebot richtet sich an Kinder und Jugendliche mit Förderbedarf in Sprache, Kommunikation oder sozial-emotionalem Verhalten. Der Unterricht in Klein",
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Verhalten und Sprache",
+        "titel": "Angebot «Verhalten und Sprache»",
         "text": "Lernen in individuellen Settings."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "fussball.jpg",
+        "alt": "Jugendliche in Fussballtrikots stehen im Kreis auf dem Rasen"
       },
       {
         "art": "text",
@@ -687,12 +693,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -702,21 +731,32 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   },
   {
     "pfad": "/angebot/verhalten-plus/",
-    "titel": "Verhalten Plus",
+    "titel": "Angebot «Verhalten Plus»",
     "beschreibung": "Verhalten Plus bietet Kindern und Jugendlichen im Autismus-Spektrum sowie mit komplexem Unterstützungsbedarf einen klar strukturierten, reizarmen Lern- und",
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Verhalten Plus",
+        "titel": "Angebot «Verhalten Plus»",
         "text": "Förderung in einem bedarfsgerechten Lernumfeld."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "campus.jpg",
+        "alt": "Luftaufnahme des SONNENBERG-Areals in Baar"
       },
       {
         "art": "text",
@@ -727,12 +767,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -742,21 +805,32 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   },
   {
     "pfad": "/angebot/sehen-plus/",
-    "titel": "Sehen Plus",
+    "titel": "Angebot «Sehen Plus»",
     "beschreibung": "Sehen Plus begleitet sehbeeinträchtigte und blinde Kinder und Jugendliche mit zusätzlichen kognitiven oder mehrfachen Beeinträchtigungen vom 4. bis zum 20.",
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Sehen Plus",
+        "titel": "Angebot «Sehen Plus»",
         "text": "Individuelle Entwicklung der jeweiligen Mehrfach-Beeinträchtigungen entsprechend."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "aquarell.jpg",
+        "alt": "Kinder malen mit Wasserfarben an einem gemeinsamen Tisch"
       },
       {
         "art": "text",
@@ -767,12 +841,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -782,21 +879,32 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   },
   {
     "pfad": "/angebot/therapie-und-gesundheit/",
-    "titel": "Therapie & Gesundheit",
+    "titel": "Angebot Therapie & Gesundheit",
     "beschreibung": "Das Angebot Therapie & Gesundheit vereint therapeutische und pflegerische Fachkompetenz. Physiotherapie, Ergotherapie, Logopädie und Psychologie unterstütz",
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Therapie & Gesundheit",
+        "titel": "Angebot Therapie & Gesundheit",
         "text": "Vielfältiges Therapieangebot und qualifiziertes Medikamentenmanagement."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "campus.jpg",
+        "alt": "Luftaufnahme des SONNENBERG-Areals in Baar"
       },
       {
         "art": "text",
@@ -807,12 +915,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -822,21 +953,32 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   },
   {
     "pfad": "/angebot/erwachsene-sehen-plus/",
-    "titel": "Erwachsene Sehen Plus",
+    "titel": "Angebot «Erwachsene Sehen Plus»",
     "beschreibung": "Erwachsene Sehen Plus bietet erwachsenen Menschen mit Sehbeeinträchtigung oder Blindheit und Mehrfachbeeinträchtigung ein bedürfnisorientiertes Wohn- und B",
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Erwachsene Sehen Plus",
+        "titel": "Angebot «Erwachsene Sehen Plus»",
         "text": "Wohnen und Tagesstruktur für Mehrfachbeeinträchtige Erwachsene."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "campus.jpg",
+        "alt": "Luftaufnahme des SONNENBERG-Areals in Baar"
       },
       {
         "art": "text",
@@ -847,12 +989,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -862,6 +1027,11 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   },
@@ -872,11 +1042,17 @@
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
         "titel": "Fachstelle Sehen",
         "text": "Die zentrale Anlaufstelle für alle Fragen rund um das funktionale Sehvermögen."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "campus.jpg",
+        "alt": "Luftaufnahme des SONNENBERG-Areals in Baar"
       },
       {
         "art": "text",
@@ -887,12 +1063,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -902,21 +1101,32 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   },
   {
     "pfad": "/angebot/wissen/",
-    "titel": "Wissen",
+    "titel": "Angebot Wissen",
     "beschreibung": "Das Angebot Wissen vereint Medienzentrum und Bildungszentrum zu einer zentralen Plattform für Fachkompetenz und sonderpädagogische Materialien.",
     "bausteine": [
       {
         "art": "held",
-        "spalten": 6,
+        "spalten": 4,
         "marke": "Angebote",
         "markeZiel": "/angebot/",
-        "titel": "Wissen",
+        "titel": "Angebot Wissen",
         "text": "Medienzentrum und Bildungszentrum unter einem Dach."
+      },
+      {
+        "art": "bild",
+        "spalten": 2,
+        "quelle": "campus.jpg",
+        "alt": "Luftaufnahme des SONNENBERG-Areals in Baar"
       },
       {
         "art": "text",
@@ -927,12 +1137,35 @@
         ]
       },
       {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Für wen",
+        "text": "[Bitte ergänzen: Für wen – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Unterricht",
+        "text": "[Bitte ergänzen: Unterricht – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
+        "art": "kachel",
+        "spalten": 2,
+        "titel": "Begleitung",
+        "text": "[Bitte ergänzen: Begleitung – zwei bis drei Sätze. Vorbild ist die Seite Angebot «Sehen».]"
+      },
+      {
         "art": "kontakt",
         "spalten": 3,
-        "farbe": "gelb",
-        "titel": "Fragen zu diesem Angebot?",
-        "text": "Das Intake hört zu und hilft weiter.",
+        "titel": "Ansprechperson",
+        "text": "[Bitte ergänzen: Name und E-Mail der Ansprechperson. Bis dahin führt der Weg über das Intake.]",
         "intake": true
+      },
+      {
+        "art": "kachel",
+        "spalten": 3,
+        "titel": "Unterlagen",
+        "text": "[Bitte ergänzen: Flyer und Merkblätter zu diesem Angebot.]"
       },
       {
         "art": "aufruf",
@@ -942,6 +1175,11 @@
           "titel": "Zur Aufnahme",
           "pfad": "/aufnahme/"
         }
+      },
+      {
+        "art": "hinweis",
+        "spalten": 6,
+        "text": "Hinweis an die Redaktion: Es fehlen noch Für wen, Unterricht, Begleitung, Ansprechperson, Unterlagen. Die drei Kacheln heissen überall wie beim Angebot «Sehen» (Für wen, Unterricht, Begleitung) – wo das nicht passt, etwa bei der Fachstelle oder bei Wissen, bitte umbenennen. Auch das Bild ist ein Platzhalter aus dem vorhandenen Bestand."
       }
     ]
   }
